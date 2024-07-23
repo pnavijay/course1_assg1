@@ -13,9 +13,9 @@
  * @brief <Add Brief Description Here >
  *
  * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ *stats.h header file
+ * @Vijay anand <Add FirsName LastName>
+ * @23-07-2024 >
  *
  */
 #ifndef __STATS_H__
@@ -23,18 +23,33 @@
 
 /* Add Your Declarations and Function Comments here */ 
 
-/**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
+
+/*Function to sort the data set*/
+int* sort_array(unsigned char*, int);
 
 
-#endif /* __STATS_H__ */
+/* Function to print given data set*/
+void print_array(int*, int);
+
+
+/* Function  to find the median in given data set and length*/
+int find_median(int*, int);
+
+
+/* Function  to find the mean in given data set and length*/
+int find_mean(int*, int);
+
+
+/* Function  to find the maximum in given data set and length*/
+int find_maximum(int*, int);
+
+/* Function  to find the minimum in given data set and length*/
+int find_minimum(int*, int);
+
+/* Function to print the output results of dataset*/
+void print_statistics(int, int, int, int);
+
+
+
+#endif 
+/* __STATS_H__ */

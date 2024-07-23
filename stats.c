@@ -35,9 +35,62 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
+    int s[SIZE];
+    int med, mea, max, min,i;
+
+    int* sorted_array = sort_array(test, SIZE);
+    clrscr();
+    for (i = 0; i < SIZE; i++) {
+        s[i] = sorted_array[i];
+    }
+
+    print_array(s, SIZE);
+    med = find_median(s, SIZE);
+
+    mea = find_mean(s, SIZE);
+    max = find_maximum(s, SIZE);
+    min = find_minimum(s, SIZE);
+    print_statistics(med, mea, max, min);
+
+    return 0;
+
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
 
 }
 
-/* Add other Implementation File Code Here */
+int* sort_array(unsigned char* array, int size)
+{
+
+}
+
+void print_array(int* array, int size)
+{
+
+}
+
+int find_median(int* array, int size)
+{
+
+}
+
+int find_mean(int* array, int size) 
+{
+
+}
+
+int find_maximum(int* array, int size)
+{
+
+}
+
+int find_minimum(int* array, int size)
+{
+
+}
+
+void print_statistics(int median, int mean, int max, int min)
+{
+
+}
+/*end of main */
