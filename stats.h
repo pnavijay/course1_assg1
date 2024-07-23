@@ -12,8 +12,8 @@
  * @file <Add File Name> 
  * @brief <Add Brief Description Here >
  *
- * <Add Extended Description Here>
- *stats.h header file
+ * <3RD CHANGE IN STATS.H HEADER FILE>
+ *
  * @Vijay anand <Add FirsName LastName>
  * @23-07-2024 >
  *

@@ -12,10 +12,10 @@
  * @file <Add File Name> 
  * @brief <Add Brief Description Here >
  *
- * <Add Extended Description Here>
+ * <STATS.C>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * VIJAY ANAND P
+ * 23-07-2024
  *
  */
 
@@ -27,7 +27,7 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
-void main() {
+int main() {
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
@@ -39,7 +39,7 @@ void main() {
     int med, mea, max, min,i;
 
     int* sorted_array = sort_array(test, SIZE);
-    clrscr();
+    
     for (i = 0; i < SIZE; i++) {
         s[i] = sorted_array[i];
     }
@@ -59,38 +59,98 @@ void main() {
 
 }
 
+
 int* sort_array(unsigned char* array, int size)
 {
 
+static int sorted_array[SIZE];
+    int i,j; 
+    for (i = 0; i < size; i++) {
+        sorted_array[i] = array[i]; // Implicit conversion from unsigned char to int
+    }
+
+    for ( i = 0; i < size - 1; i++) {
+        for ( j = i + 1; j < size; j++) {
+            if (sorted_array[i] > sorted_array[j]) {
+                int temp = sorted_array[i];
+                sorted_array[i] = sorted_array[j];
+                sorted_array[j] = temp;
+            }
+        }
+    }
+    return sorted_array;
+
 }
+
+
 
 void print_array(int* array, int size)
 {
-
+int i;
+    for ( i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
 }
+
 
 int find_median(int* array, int size)
 {
-
+if (size % 2 == 0) {
+        return (array[size / 2 - 1] + array[size / 2]) / 2;
+    } else {
+        return array[size / 2];
+    }
 }
+
 
 int find_mean(int* array, int size) 
 {
-
+int sum = 0;
+    int i=0;
+    for ( i = 0; i < size; i++) {
+        sum += array[i];
+    }
+    return sum / size;
 }
+
+
 
 int find_maximum(int* array, int size)
 {
-
+int max = array[0];
+    int i=1;
+    for (i = 1; i < size; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    return max;
 }
+
+
 
 int find_minimum(int* array, int size)
 {
-
+int min = array[0];
+        int i=1;
+    for ( i = 1; i < size; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
+    return min;
 }
+
+
 
 void print_statistics(int median, int mean, int max, int min)
 {
-
+    printf("Median: %d\n", median);
+    printf("Mean: %d\n", mean);
+    printf("Maximum: %d\n", max);
+    printf("Minimum: %d\n", min);
 }
-/*end of main */
+
+
+/*end of PROGRAM */
